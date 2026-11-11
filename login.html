@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول | ‹/›   Ⓞ⃝ 𝑩𝑶𝑼𝑪𝑯𝑰𝟓𝑰</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style id="abdou-red-theme">
+:root{color-scheme:dark;--accent:#ef233c;--accent2:#b90d20}
+button,.btn-blue,.btn-dark,a[class*="bg-gradient-to-"]{
+  border-radius:14px!important; transition:transform .2s ease,box-shadow .2s ease,filter .2s ease!important;
+}
+button[type="submit"],.btn-blue,a[class*="bg-gradient-to-"]{
+  background:linear-gradient(135deg,#ff334d,#b90d20)!important;color:#fff!important;
+  border:1px solid rgba(255,80,100,.65)!important;
+  box-shadow:0 7px 22px rgba(239,35,60,.22);
+}
+button:hover,.btn-blue:hover,.btn-dark:hover{transform:translateY(-2px);filter:brightness(1.12);box-shadow:0 8px 24px rgba(239,35,60,.3)!important}
+button:active,.btn-blue:active,.btn-dark:active{transform:scale(.97)}
+input:focus,textarea:focus,select:focus{border-color:#ef233c!important;box-shadow:0 0 0 2px rgba(239,35,60,.18)!important;outline:none}
+</style>
+
+<style id="abdou-terminal-red-theme">
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Share+Tech+Mono&display=swap');
+:root{color-scheme:dark;--ab-red:#ff1018;--ab-red-dark:#b90008;--ab-bg:#000;--ab-panel:#090909;--ab-border:#343434}
+html,body{background:#000!important;color:#ddd!important;font-family:'Oswald','Arial Narrow',sans-serif!important;letter-spacing:1.5px}
+h1,h2,h3,h4,button,a,label,.btn{font-family:'Oswald','Arial Narrow',sans-serif!important;letter-spacing:2px!important;text-transform:uppercase}
+input,textarea,select,.console-box,.mini-terminal,pre,code{font-family:'Share Tech Mono','Courier New',monospace!important;letter-spacing:1px!important}
+header{background:#080808!important;border-color:#292929!important}
+[class*="bg-[#12141c]"],[class*="bg-[#0e1018]"],[class*="bg-[#0c0e14]"],[class*="bg-[#1a1d27]"]{background:#090909!important}
+[class*="border-gray-"],[class*="border-[#"]{border-color:#353535!important}
+button,.btn-blue,.btn-dark,a[class*="bg-gradient-to-"]{border-radius:0!important;transition:all .18s ease!important}
+button[type="submit"],.btn-blue,a[class*="bg-gradient-to-"]{background:#ed0008!important;color:#fff!important;border:1px solid #ff3038!important;box-shadow:0 0 18px rgba(255,0,12,.28)!important}
+button:hover,.btn-blue:hover,.btn-dark:hover{filter:brightness(1.18);box-shadow:0 0 20px rgba(255,0,12,.35)!important}
+button:active,.btn-blue:active,.btn-dark:active{transform:scale(.98)}
+input,textarea,select{background:#080808!important;border:1px solid #393939!important;border-radius:0!important;color:#eee!important}
+input:focus,textarea:focus,select:focus{border-color:#ff1018!important;box-shadow:0 0 0 2px rgba(255,16,24,.18)!important;outline:none}
+.console-box,.mini-terminal{background:#050505!important;border:1px solid #343434!important;border-radius:0!important;color:#b8b8b8!important}
+.stat-card,.github-card,.profile-card{background:#090909!important;border-color:#333!important;border-radius:0!important}
+.tab-active{color:#ff1820!important;border-color:#ff1018!important}
+.gradient-text{color:#ff1820!important;background:none!important;-webkit-text-fill-color:#ff1820!important}
+</style>
+
+</head>
+<body dir="rtl" class="bg-[#0a0c12] min-h-screen flex items-center justify-center p-4">
+    <div class="bg-[#12141c] rounded-2xl p-8 w-full max-w-md border border-red-500/30 shadow-2xl">
+        <div class="text-center mb-8">
+            <div class="w-28 h-28 mx-auto mb-4 overflow-hidden rounded-full border-4 border-red-600 shadow-lg shadow-red-900/50">
+                <img src="/static/abdou-profile.jpg" alt="ABDOUUU" class="w-full h-full object-cover">
+            </div>
+            <h1 class="text-3xl font-bold text-white">‹/›   Ⓞ⃝ 𝑩𝑶𝑼𝑪𝑯𝑰𝟓𝑰</h1>
+            <p class="text-gray-400 text-sm mt-1">منصة استضافة البوتات والخوادم</p>
+        </div>
+        
+        {% if error %}
+        <div class="bg-red-500/20 border border-red-500 rounded-lg p-3 mb-4 text-red-400 text-sm text-center">
+            <i class="fas fa-exclamation-triangle mr-2"></i> {{ error }}
+        </div>
+        {% endif %}
+        
+        <form method="POST">
+            <div class="mb-4">
+                <label class="block text-gray-400 text-sm mb-2">اسم المستخدم</label>
+                <input type="text" name="username" required 
+                    class="w-full bg-[#0c0e14] border border-gray-700 rounded-lg px-4 py-3 text-white focus:border-red-500 focus:outline-none transition">
+            </div>
+            <div class="mb-6">
+                <label class="block text-gray-400 text-sm mb-2">كلمة المرور</label>
+                <input type="password" name="password" required
+                    class="w-full bg-[#0c0e14] border border-gray-700 rounded-lg px-4 py-3 text-white focus:border-red-500 focus:outline-none transition">
+            </div>
+            <button type="submit" 
+                class="w-full bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-600 text-white font-bold py-3 rounded-lg transition transform hover:scale-105">
+                <i class="fas fa-sign-in-alt mr-2"></i> تسجيل الدخول
+            </button>
+        </form>
+        
+        <div class="text-center mt-6">
+            <p class="text-gray-600 text-xs">
+                <i class="fas fa-shield-alt"></i> دخول آمن ومصرّح به فقط
+            </p>
+        </div>
+    </div>
+</body>
+</html>
